@@ -2,12 +2,14 @@ from collections import Counter
 import tkinter as tk
 from tkinter import filedialog
 
+files_ending = 0
 header_printed = False
 results = []
 
+
 """""
 
-The FUNCTIONS under this TEXT was made for jOkINg way of algorithms practrice (THAT COOL BUT THE WAY IT WAS MADE AND FOR WHAT - IS CRUEL, who need this?)
+The FUNCTIONS under this TEXT was made for jOkINg way of algorithms practice (THAT COOL BUT THE WAY IT WAS MADE AND FOR WHAT - IS CRUEL, who need this?)
 
 So anyway i'd like to add an more useful function in future like sMaRT tEXt rEaDInG EmPOweRed with AI
 
@@ -35,13 +37,13 @@ def txt_read_and_write():
     # Read the contents of the selected files
     file_contents = {}
     for path in file_paths:
+
         try:
             with open(path, "r", encoding="utf-8") as f:
                 file_contents[path] = f.read()
         except Exception as e:
             print(f"Error reading file {path}: {e}")
-
-    return file_contents
+    return file_contents, file_paths
 
 def split_text(file_contents):
     return file_contents.split()
@@ -56,8 +58,12 @@ def sort_on(char_dict):
     return sorted_char_dict
 
 
-def display_output(path, file_contents):
-    global header_printed
+def display_output(path, file_contents,file_paths):
+
+    global header_printed,files_ending
+
+    total_files = len(file_paths)
+
     if not header_printed:
         print("============ BOOKBOT ============")
         header_printed = True
@@ -78,6 +84,10 @@ def display_output(path, file_contents):
         if char.strip():
             print(f"{char}: {count}")
 
-    print("============= END ===============")
+    files_ending += 1
+
+    if files_ending == total_files:
+        print("============ ENDING ============")
+
 
 
