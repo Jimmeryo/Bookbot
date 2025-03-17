@@ -7,25 +7,6 @@ header_printed = False
 results = []
 
 
-"""""
-
-The FUNCTIONS under this TEXT was made for jOkINg way of algorithms practice (THAT COOL BUT THE WAY IT WAS MADE AND FOR WHAT - IS CRUEL, who need this?)
-
-So anyway i'd like to add an more useful function in future like sMaRT tEXt rEaDInG EmPOweRed with AI
-
-But tbh its probably will be in not in few weeks
-
-At the moment of March 16th I started to work on simple "Text Search System" that could not just find words (who need this?), but also tacking a part of the text 
-and can output more than 1 sentence, or even whole paragraph or topic if number of words that user looking for is more than % of text that have even some sense
-in topic that we are looking for (yeah that also algorithms, but i already imagined it).
-
-
-P.S.
-I'd like to make an interface more interesting also.
-
-"""""
-
-
 def txt_read_and_write():
     root = tk.Tk()
     root.withdraw()  # Hide the root window

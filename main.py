@@ -1,5 +1,4 @@
 from stats import *
-import sys
 
 if __name__ == "__main__":
     file_contents, file_paths = txt_read_and_write()  # Select and read files
